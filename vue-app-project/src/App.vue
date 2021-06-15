@@ -30,7 +30,7 @@
         flat
         tile
     >
-      <v-toolbar dense color="yellow accent-2">
+      <v-toolbar dense dark color="primary">
 
         <v-toolbar-title>Vue Ads Application</v-toolbar-title>
 
@@ -70,6 +70,7 @@ export default {
     return {
       drawer: false,
       links: [
+        {title: 'Home', icon: 'mdi-home', url: '/'},
         {title: 'Login', icon: 'mdi-lock', url: '/login'},
         {title: 'Registration', icon: 'mdi-face', url: '/registration'},
         {title: 'Orders', icon: 'mdi-bookmark-outline', url: '/orders'},

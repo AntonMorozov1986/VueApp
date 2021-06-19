@@ -30,9 +30,13 @@
         flat
         tile
     >
-      <v-toolbar dense dark color="primary">
+      <v-app-bar
+          dense
+          dark
+          color="primary"
+      >
 
-        <v-toolbar-title>Vue Ads Application</v-toolbar-title>
+        <router-link to="/" tag="span" class="pointer">Vue Ads Application</router-link>
 
         <v-spacer></v-spacer>
 
@@ -53,7 +57,7 @@
             class="hidden-md-and-up"
             @click="drawer = !drawer"
         ></v-app-bar-nav-icon>
-      </v-toolbar>
+      </v-app-bar>
     </v-card>
 
     <v-main>
@@ -85,6 +89,11 @@ export default {
 <style>
 .btn:hover {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.pointer {
+  cursor: pointer;
+  font-weight: bold;
 }
 </style>
 

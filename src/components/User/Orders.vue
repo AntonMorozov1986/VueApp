@@ -59,7 +59,6 @@ export default {
 
   methods: {
     markDone (order) {
-      alert('done');
       order.isDone = true;
     }
   }

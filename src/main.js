@@ -1,22 +1,25 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import vuetify from './plugins/vuetify'
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store';
+import vuetify from './plugins/vuetify';
 import firebase from "firebase/app";
-import '@babel/polyfill'
-// import user from "@/store/user";
+import '@babel/polyfill';
+import BuyModalComponents from "@/components/Shared/BuyModal";
 
-Vue.config.productionTip = false
+
+
+Vue.config.productionTip = false;
+
+Vue.component('app-buy-modal', BuyModalComponents);
 
 new Vue({
   el: '#app',
   render: h => h(App),
-
+  vuetify,
   router,
   store,
-  vuetify,
-  created() {
+    created() {
     let firebaseConfig = {
       "apiKey": "AIzaSyAK8YbQ14i_A-43ZO9qL4fGkyunBAdH7Ew",
       "authDomain": "itc-ads-3f496.firebaseapp.com",
@@ -39,6 +42,6 @@ new Vue({
       }
     });
 
-    this.$store.dispatch('fetchAds')
+    this.$store.dispatch('fetchAds');
   }
 })

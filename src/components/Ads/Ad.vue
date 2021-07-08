@@ -14,8 +14,13 @@
           <v-card-actions>
             <v-spacer></v-spacer>
 <!--            <v-btn class="warning" plain>Edit</v-btn>-->
-            <app-edit-ad-modal v-if="isAuthor" :ad="ad"></app-edit-ad-modal>
-            <v-btn class="success">Buy</v-btn>
+            <div class="mr-3">
+              <app-edit-ad-modal v-if="isAuthor" :ad="ad"></app-edit-ad-modal>
+            </div>
+            <div>
+              <app-buy-modal :ad="ad"></app-buy-modal>
+            </div>
+
           </v-card-actions>
         </v-card>
         <div v-else>

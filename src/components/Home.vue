@@ -54,16 +54,12 @@
               <v-btn
                   text
                   :to="'/ad/' + ad.id"
+                  class="mr-3"
               >
                 Open
               </v-btn>
 
-              <v-btn
-                  text
-                  class="primary"
-              >
-                Buy
-              </v-btn>
+              <app-buy-modal :ad="ad"></app-buy-modal>
             </v-card-actions>
           </v-card>
         </v-flex>
